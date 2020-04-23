@@ -1,0 +1,55 @@
+div.menu
+    position: fixed
+    top: 0
+    left: 100%
+    width: 400px
+    height: 100%
+    background-color: $black
+    transition: left 250ms 
+    z-index: 9
+    padding: 100px 50px
+    box-sizing: border-box
+    div#menu-date-location
+        font-size: 20px
+        line-height: 25px
+        font-family: 'Museo'
+        text-transform: uppercase
+        margin-bottom: 40px
+        border-bottom: 2px solid white
+        padding-bottom: 40px
+    ul
+        list-style: none
+        font-size: 32px
+        font-family: 'Museo'
+        text-transform: uppercase
+        border-bottom: 2px solid white
+        padding-bottom: 40px
+        margin-bottom: 40px
+        li
+            margin-bottom: 10px
+            &:last-of-type
+                margin-bottom: 0
+            a
+                text-decoration: none
+                display: block
+                padding: 10px
+                transition: color 250ms
+                &:hover
+                    color: $purple
+    div#menu-social-links
+        display: flex
+        a
+            margin: 0 10px
+            padding: 10px
+            display: block
+            &:first-of-type
+                margin-left: 0
+            svg
+                fill: $white
+                height: 30px
+                transition: fill 250ms
+            &:hover
+                svg
+                    fill: $purple
+div.menu-open
+    left: calc(100% - 400px)

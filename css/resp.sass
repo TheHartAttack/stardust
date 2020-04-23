@@ -1,0 +1,78 @@
+@media only screen and (max-width: 1200px)
+    /*Home*/
+    header
+        position: absolute !important
+    header.active
+        position: fixed !important
+    section#home-hero
+        h2
+            font-size: 20px
+    section#page-hero
+        margin-top: 100px
+    section#main-container
+        padding: 20px 0
+        div#home-lineup-wrapper
+            grid-template-columns: 1fr
+            a.home-lineup
+                height: 50vh   
+                &:last-of-type
+                    grid-area: unset
+                    height: unset
+        div#home-lineup-wrapper
+            margin-bottom: 20px
+        div#home-banner-wrapper
+            position: relative
+            box-sizing: border-box
+            padding: 40px 40px
+            margin: 20px 0
+            svg
+                position: absolute
+                top: 50px
+                &:first-of-type
+                    left: 30px
+                &:last-of-type
+                    right: 30px
+            div.home-banner-inner
+                padding: 0
+                width: 100%
+                h2
+                    margin: 0 40px 40px
+        div#home-news-wrapper
+            grid-template-columns: 1fr
+    footer
+        div#footer-social-links
+            position: static
+            left: unset
+            transform: unset
+        svg.sd-star
+            display: none
+    
+    /*Lineup*/
+    div.lineup-list
+        div.lineup-band-wrapper
+            grid-template-columns: 1fr
+    div#band-wrapper
+        grid-template-columns: 1fr
+        margin-top: 0
+        div.band-image
+            height: 240px
+
+    /*Tickets*/
+    div#ticket-container
+        flex-direction: column
+        div#ticket-booking
+            margin-right: 0
+            margin-bottom: 20px
+            div.ticket-body-row
+                &:last-of-type
+                    grid-template-columns: repeat(2, 1fr)
+                    a
+                        grid-area: unset
+
+    /*News*/
+    div#news-archive-inner
+        grid-template-columns: 1fr
+
+    /*History*/
+    div#history-inner
+        grid-template-columns: 1fr

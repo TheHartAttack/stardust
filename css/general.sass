@@ -1,0 +1,88 @@
+*
+    padding: 0
+    margin: 0
+    color: $white
+
+h1, h2, h3, h4, h5, h6
+    font-family: 'Museo'
+    text-transform: uppercase
+
+p
+    font-family: 'Open Sans'
+    line-height: 1.5rem
+
+body
+    background-color: $black
+    overflow-x: hidden
+
+a.button
+    cursor: pointer
+    font-weight: bold
+    border: 2px solid $white
+    position: relative
+    font-family: 'Museo'
+    letter-spacing: 1px
+    transition: color 250ms , background-color 250ms, border-color 250ms
+    display: inline-block
+    text-align: center
+    user-select: none
+    text-transform: uppercase
+    text-decoration: none
+    &:hover
+        color: $black
+        background-color: $white
+a.sml-btn
+    padding: 10px
+    font-size: 16px
+a.lrg-btn
+    padding: 20px
+    font-size: 24px
+
+section#page-hero
+    height: 30vh
+    display: flex
+    align-items: center
+    justify-content: center
+    position: relative
+    h2
+        font-size: 48px
+    &::before
+        content: ""
+        height: 100%
+        width: 100%
+        position: absolute
+        top: 0
+        background: linear-gradient(to bottom, black, rgba(0, 0, 0, 0), black)
+        z-index: -1
+    &::after
+        content: ""
+        position: absolute
+        top: 0
+        left: 0
+        height: 100%
+        width: 100%
+        background-image: url('img/page-hero.jpeg')
+        background-size: cover
+        background-position: center
+        filter: brightness(50%)
+        z-index: -2
+
+section#main-container
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    flex-direction: column
+    padding: 40px 0px
+    background-image: url(img/space.jpg)
+    background-size: 100%
+    background-position: top
+    box-sizing: border-box
+    &::before
+            content: ''
+            height: 100%
+            width: 100%
+            position: absolute
+            top: 0
+            background: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0), rgba(0,0,0,1))
+            z-index: 0

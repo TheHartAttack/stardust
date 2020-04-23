@@ -1,0 +1,116 @@
+div.lineup-poster-list
+    z-index: 1
+    display: flex
+    border: 2px solid $white
+    box-sizing: border-box
+    align-items: center
+    justify-content: center
+    background-color: transparentize($black, 0.5)
+    position: relative
+    user-select: none
+    text-transform: uppercase
+    margin-bottom: 40px
+    &::after
+        content: ''
+        position: absolute
+        height: 100%
+        width: 50%
+        z-index: -1
+        background: transparentize($purple, 0.75)
+        transition: left 250ms
+    div.lineup-poster-toggle, div.lineup-list-toggle
+        font-family: "Museo"
+        flex: 1
+        width: 100px
+        height: 50px
+        display: flex
+        align-items: center
+        justify-content: center
+        color: lighten($black, 50%)
+        transition: color 250ms
+div.lineup-poster-list.toggle-list
+    &::after
+        left: 0
+    div.lineup-poster-toggle
+        cursor: pointer
+    div.lineup-list-toggle
+        color: $white
+div.lineup-poster-list.toggle-poster
+    &::after
+        left: 50%
+    div.lineup-list-toggle
+        cursor: pointer
+    div.lineup-poster-toggle
+        color: $white
+
+div.lineup-poster
+    z-index: 1
+    display: flex
+    border: 2px solid $white
+    display: none
+    transition: opacity 250ms
+    max-width: calc(100% - 40px)
+    img
+        width: 100%
+        height: auto
+
+div.lineup-list
+    z-index: 1
+    display: none
+    transition: opacity 250ms
+    max-width: 1500px
+    width: calc(100% - 40px)
+    h3.lineup-stage
+        z-index: 0
+        margin: 80px 0 40px
+        font-size: 24px
+        text-align: center
+        &:first-child
+            margin: 40px 0
+    div.lineup-band-wrapper
+        box-sizing: content-box
+        width: 100%
+        z-index: 1
+        text-align: center
+        display: grid
+        grid-gap: 30px
+        grid-template-columns: repeat(3, 1fr)
+        a.lineup-band
+            height: 360px
+            position: relative
+            cursor: pointer
+            background-color: $black
+            border: 2px solid $white
+            transition: width 250ms ease-in-out
+            overflow: hidden
+            box-sizing: border-box
+            div.lineup-band-image
+                background-image: url('../img/billie-eilish.jpg')
+                background-size: cover
+                background-position: center
+                height: 70%
+                width: 100%
+                transition: transform 250ms ease-in-out
+            div.lineup-band-inner
+                height: 30%
+                margin-top: auto
+                display: flex
+                justify-content: center
+                align-items: center
+                background-color: $black
+                width: 100%
+                position: absolute
+                bottom: 0
+                transition: color 250ms ease-in-out, background-color 250ms ease-in-out
+                h4
+                    font-size: 20px
+            &:hover
+                div.lineup-band-image
+                    transform: scale(1.1)
+                div.lineup-band-inner
+                    background-color: $white
+                    h4
+                        color: $black
+
+div.lineup-poster.active, div.lineup-list.active
+    display: block

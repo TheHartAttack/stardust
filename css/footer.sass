@@ -1,0 +1,43 @@
+footer
+    width: 100%
+    background-color: $black
+    padding: 20px
+    box-sizing: border-box
+    display: flex
+    align-items: center
+    justify-content: space-between
+    div#footer-social-links
+        display: flex
+        position: absolute
+        left: 50%
+        transform: translatex(-50%)
+        a
+            margin: 0 10px
+            display: block
+            padding: 10px
+            svg
+                fill: $white
+                height: 30px
+                transition: fill 250ms
+            &:hover
+                svg
+                    fill: $purple
+
+
+    a
+        text-decoration: none
+        text-align: center
+        font-family: 'Azonixx'
+        font-size: 12px
+        transition: color 250ms
+        svg#dhlogo
+            fill: $white
+            max-height: 100%
+            height: 40px
+            transition: fill 250ms
+        &:hover
+            color: $purple
+            svg#dhlogo
+                fill: $purple
+    svg.sd-star
+        height: 64px

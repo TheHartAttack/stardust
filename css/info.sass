@@ -1,0 +1,57 @@
+div#info-inner
+    z-index: 1
+    width: 100%
+    max-width: 1500px
+    justify-self: flex-start
+    div.info-select
+        font-family: 'Museo'
+        letter-spacing: 1px
+        width: 300px
+        max-width: 100%
+        margin: auto
+        position: relative
+        div.info-cat
+            background-color: transparentize($black, 0.125)
+            display: flex
+            padding: 20px
+            justify-content: space-between
+            text-transform: uppercase
+            cursor: pointer
+            border: 2px solid $white
+            box-sizing: border-box
+            span
+                transition: transform 250ms
+        div.info-cat.open
+            span
+                transform: rotate(90deg)
+        div.info-options
+            background-color: transparentize($black, 0.125)
+            flex-direction: column
+            border: 2px solid $white
+            border-top: none
+            display: none
+            position: absolute
+            top: 67px
+            width: 300px
+            box-sizing: border-box
+            a
+                display: block
+                font-family: 'Museo'
+                font-size: 20px
+                text-decoration: none
+                text-transform: uppercase
+                padding: 20px
+                transition: background-color 250ms
+                &:hover
+                    background-color: lighten($black, 25%)
+    div.info-container
+        background-color: $black
+        border: 2px solid $white
+        box-sizing: border-box
+        padding: 40px
+        font-family: 'Open Sans'
+        margin-top: 20px
+        p
+            margin-bottom: 20px
+                
+
